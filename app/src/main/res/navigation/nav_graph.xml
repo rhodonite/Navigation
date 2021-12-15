@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.rhodonite.navigation.func.FirstFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_first">
+       <action
+            android:id="@+id/action_FirstFragment_to_Tab1"
+            app:destination="@id/Fragment_Tab1"/>
+     <action
+             android:id="@+id/action_FirstFragment_to_Tab2"
+             app:destination="@id/Fragment_Tab2" />
+         <action
+             android:id="@+id/action_FirstFragment_to_Tab3"
+             app:destination="@id/Fragment_Tab3" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/Fragment_Tab1"
+        android:name="com.rhodonite.navigation.func.Fragment_Tab1"
+        tools:layout="@layout/fragment_tab1">
+        <action
+            android:id="@+id/action_Fragment_Tab1_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Fragment_Tab2"
+        android:name="com.rhodonite.navigation.func.Fragment_Tab2"
+        tools:layout="@layout/fragment_tab2">
+        <action
+            android:id="@+id/action_Fragment_Tab2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Fragment_Tab3"
+        android:name="com.rhodonite.navigation.func.Fragment_Tab3"
+        tools:layout="@layout/fragment_tab3">
+        <action
+            android:id="@+id/action_Fragment_Tab3_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+</navigation>
